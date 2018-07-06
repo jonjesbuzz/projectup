@@ -1,3 +1,5 @@
+import Foundation
+
 print(ProjectStructures.structures)
 
 let test = Project(named: "Test")
