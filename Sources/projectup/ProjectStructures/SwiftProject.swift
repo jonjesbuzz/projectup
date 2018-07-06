@@ -3,7 +3,7 @@ public class SwiftProject: Project {
         return [
             File("Package.swift"),
             Directory("Sources", contents: [
-                File("main.swift", content: "print(\"Hello, world!\"")
+                File("main.swift", content: "print(\"Hello, world!\")")
             ]),
             Directory("Tests")
         ]
