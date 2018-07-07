@@ -1,3 +1,11 @@
+//
+//  main.swift
+//  projectup
+//
+//  Created by Jonathan Jemson on 7/7/18.
+//  Copyright © 2018 Jonathan Jemson. 
+//
+
 import Foundation
 import ProjectUpKit
 import Commander
