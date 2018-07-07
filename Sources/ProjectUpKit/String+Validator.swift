@@ -1,5 +1,5 @@
 //
-//  StringValidator.swift
+//  String+Validator.swift
 //  ProjectUpKit
 //
 //  Created by Jonathan Jemson on 7/7/18.
