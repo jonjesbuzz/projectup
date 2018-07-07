@@ -1,12 +1,11 @@
 public class SwiftProject: Project {
     public override var structure: [FileElement] {
         return [
-            File("Package.swift", templateContent: packageContent, context: [
-                "swiftVersion": swiftVersion,
-                "projectName": projectName
-            ]),
+            File("Package.swift", templateContent: packageContent, context: ["swiftVersion": swiftVersion, "projectName": projectName]),
             Directory("Sources", contents: [
-                File("main.swift", content: "print(\"Hello, world! \(self.projectName)\")")
+                Directory(self.projectName, contents: [
+                    File("main.swift", content: "print(\"Hello, world! \(self.projectName)\")")
+                ])
             ]),
             Directory("Tests")
         ]
