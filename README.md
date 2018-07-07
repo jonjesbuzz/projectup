@@ -30,7 +30,10 @@ The ProjectUpKit framework allows you to define your own project structures. Sub
 class SampleProject: Project {
     public override var structure: [FileElement] {
         return [
-            File("FileSample").
+            File("FileSample"),
+            Directory("DirSample", contents: [
+                File("sample.manifest", content: "Sample Manifest File")
+            ])
         ]
     }
 }
