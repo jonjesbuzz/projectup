@@ -1,21 +1,20 @@
 import Foundation
 
-public class Project: CustomStringConvertible {
+open class Project: CustomStringConvertible {
 
-    public var structure: [FileElement] { return [] }
+    open var structure: [FileElement] { return [] }
     private(set) public var projectName: String
-    private(set) public var rootURL: URL
 
     public required init(named projectName: String, location: String = ".") {
         self.projectName = projectName
-        self.rootURL = URL(fileURLWithPath: location)
     }
 
     public var description: String {
-        return "Project: \(projectName)\nLocation: \(self.rootURL)\nType: \(type(of: self))\nStructure: \(structure)"
+        return "Project: \(projectName)\nType: \(type(of: self))\nStructure: \(structure)"
     }
 
-    public func create() throws {
+    public func create(at location: String = ".") throws {
+        let rootURL = URL(fileURLWithPath: (location as NSString).expandingTildeInPath)
         let rootDirectory = Directory(projectName, contents: structure)
         do {
             try rootDirectory.create(at: rootURL)
