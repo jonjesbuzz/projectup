@@ -5,6 +5,10 @@ import PackageDescription
 
 let package = Package(
     name: "ProjectUp",
+    products: [
+        .library(name: "ProjectUpKit", targets: ["ProjectUpKit"]),
+        .executable(name: "projectup", targets: ["projectup"])
+    ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(url: "https://github.com/kylef/Stencil.git", from: "0.8.0")
