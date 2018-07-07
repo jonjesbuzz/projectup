@@ -1,3 +1,11 @@
+//
+//  Project.swift
+//  ProjectUpKit
+//
+//  Created by Jonathan Jemson on 7/6/18.
+//  Copyright © 2018 Jonathan Jemson. 
+//
+
 import Foundation
 
 open class Project: CustomStringConvertible {
