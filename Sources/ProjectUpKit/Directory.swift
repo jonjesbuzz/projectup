@@ -15,9 +15,7 @@ public struct Directory: FileElement, CustomStringConvertible {
         do {
             print("Creating directory \(filename)")
             try fileManager.createDirectory(at: directoryURL, withIntermediateDirectories: false)
-            for file in contents {
-                try file.create(at: directoryURL)
-            }
+            try contents.create(at: directoryURL)
         } catch {
             throw ProjectUpError.fileWriteError(reason: "Could not create directory \(filename)", underlyingError: error)
         }
