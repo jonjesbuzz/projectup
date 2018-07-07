@@ -1,8 +1,8 @@
 import Foundation
 
-public class Project: CustomStringConvertible {
+open class Project: CustomStringConvertible {
 
-    public var structure: [FileElement] { return [] }
+    open var structure: [FileElement] { return [] }
     private(set) public var projectName: String
 
     public required init(named projectName: String, location: String = ".") {
