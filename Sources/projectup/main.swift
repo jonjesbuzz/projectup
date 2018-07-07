@@ -1,4 +1,5 @@
 import Foundation
+import ProjectUpKit
 
 print(ProjectStructures.structures)
 
