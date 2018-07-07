@@ -14,7 +14,7 @@ public class SwiftProject: Project {
     let swiftVersion = "4.2"
 
     let packageContent = """
-    // swift-tools-version: {{ swiftVersion }}
+    // swift-tools-version:{{ swiftVersion }}
     // The swift-tools-version declares the minimum version of Swift required to build this package.
 
     import PackageDescription
