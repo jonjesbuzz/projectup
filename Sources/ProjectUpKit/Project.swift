@@ -13,17 +13,17 @@ open class Project: CustomStringConvertible {
     open var structure: [FileElement] { return [] }
     private(set) public var projectName: String
 
-    public required init(named projectName: String, location: String = ".") {
+    public required init(named projectName: String) {
         self.projectName = projectName
     }
 
     public var description: String {
-        return "Project: \(projectName)\nType: \(type(of: self))\nStructure: \(structure)"
+        return "Project: \(self.projectName)\nType: \(type(of: self))\nStructure: \(structure)"
     }
 
     public func create(at location: String = ".") throws {
         let rootURL = URL(fileURLWithPath: (location as NSString).expandingTildeInPath)
-        let rootDirectory = Directory(projectName, contents: structure)
+        let rootDirectory = Directory(self.projectName, contents: structure)
         do {
             try rootDirectory.create(at: rootURL)
         } catch {
