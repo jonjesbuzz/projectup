@@ -11,7 +11,7 @@ public class SwiftProject: Project {
         ]
     }
 
-    let swiftVersion = "4.2"
+    let swiftVersion = "5.1"
 
     let packageContent = """
     // swift-tools-version:{{ swiftVersion }}
